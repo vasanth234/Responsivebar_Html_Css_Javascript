@@ -1,0 +1,139 @@
+/* Reset all margins to zero for consistency */
+* {
+    margin: 0;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 200px; /* Initial width for larger screens */
+    height: 100%;
+    background-color: darkslategrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+/* Common styles for sidebar sections */
+.sidebar-top,
+.sidebar-center,
+.sidebar-bottom {
+    width: 80%; /* Adjust width of sections */
+    padding: 10px 0px;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-bottom: 2px solid forestgreen;
+}
+
+/* Remove bottom border for the last section */
+.sidebar-bottom {
+    border: none;
+    margin-top:15px;
+    justify-content: center;
+}
+
+/* Additional classes for styling */
+.this {
+    margin-right: 10px;
+}
+
+.logo {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.sidebar-top {
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.tetr {
+    font-weight: 700;
+}
+
+/* List styles */
+.list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.list-item {
+    margin-bottom: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.list-item-text {
+    font-size: 20px;
+}
+
+/* Hover and active state for list items */
+.list-item:hover,
+.list-item.active {
+    background-color: #374151;
+    color: white;
+}
+
+/* Color design for visual elements */
+.color-design {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Night mode color styles */
+.dark {
+    background-color: black;
+}
+
+.night {
+    background-color: dodgerblue;
+}
+
+.light {
+    background-color: white;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        width: 40px; /* Decrease sidebar width for smaller screens */
+    }
+
+    .list-item-text {
+        display: none; /* Hide list item text on smaller screens */
+    }
+
+    .sidebar-bottom {
+        flex-direction: column; /* Stack items vertically in bottom section on smaller screens */
+    }
+}
+
+.sidebar.night{
+    background-color: #312e81;
+    color: white;
+}
+
+.list-item.active.night{
+    background-color: red;
+    color:crimson
+}
+
+.sidebar.light{
+    background-color: white;
+    color: black;
+}
+
+.list-item.active.light{
+    background-color: #d1d5db;
+    color: #111827;
+}
+
